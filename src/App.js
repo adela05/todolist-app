@@ -7,13 +7,13 @@ class App extends Component {
   constructor () {
     super();
     this.state = {
-      message: 'Hello Amigos!',
+      message: 'Personal Todo List!',
       newTodo: ' ',
       todos: [{
-        title: 'hi',
+        title: 'Study Javascript Tech questions',
         done: false
       },{
-        title: 'bye',
+        title: 'Work on Javascript Algo on Coding Dojo',
         done: false
       } ]
     };
@@ -36,7 +36,9 @@ class App extends Component {
 
   toggleTodoDone(event, index) {
     const todos = [...this.state.todos]; // copy the array
+    // eslint-disable-next-line
     todos [index] = {
+      // eslint-disable-next-line
       ...todos [index],
       done: event.target.checked  // update done property on copied
     }; // copy the todo can also use Object.assign
